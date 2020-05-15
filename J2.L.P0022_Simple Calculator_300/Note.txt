@@ -1,0 +1,9 @@
+Variable:
+Panel: pnContainer
+
+
+------------
+Panel_size: 500x650
+Fontfamily: Consolas
+btn_size: 90x90
+btn_fontsize: 35 bold
