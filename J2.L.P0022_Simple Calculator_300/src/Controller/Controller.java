@@ -18,6 +18,7 @@ import javax.swing.JTextField;
  */
 public class Controller {
 
+    Calculator calculator;
     MainFrame mainFrame = new MainFrame();
     private JButton btn0;
     private JButton btn1;
@@ -48,6 +49,7 @@ public class Controller {
 
     public Controller() {
         initComponents();
+        calculator = new Calculator(txtScreen);
     }
 
     private void initComponents() {
@@ -214,11 +216,67 @@ public class Controller {
         });
     }
 
-    private void txtScreenActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(0);
+    }
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(1);
+    }
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(2);
+    }
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(3);
+    }
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(4);
+    }
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(5);
+    }
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(6);
     }
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(7);
+    }
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(8);
+    }
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.pressNumber(9);
+    }
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.calculate();
+        calculator.setOperator(1);
+    }
+
+    private void btnSubActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.calculate();
+        calculator.setOperator(2);
+    }
+
+    private void btnMulActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.calculate();
+        calculator.setOperator(3);
+    }
+
+    private void btnDivActionPerformed(java.awt.event.ActionEvent evt) {
+        calculator.calculate();
+        calculator.setOperator(4);
+    }
+
+    private void txtScreenActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -239,38 +297,10 @@ public class Controller {
     }
 
     private void btnSqrtActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btnDivActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+       calculator.pressSqrt();
     }
 
     private void btnPercentActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btnMulActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
@@ -278,44 +308,20 @@ public class Controller {
         // TODO add your handling code here:
     }
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btnSubActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
     private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+       calculator.pressResult();
     }
 
     private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        calculator.pressDot();
     }
 
     private void btnNegateActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-    }
-
-    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        calculator.pressNegate();
     }
 
     private void lblClearMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+        calculator.pressClear();
     }
 
 }
