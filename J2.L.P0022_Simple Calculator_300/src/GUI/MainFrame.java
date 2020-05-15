@@ -429,7 +429,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnDiv.setBackground(new java.awt.Color(103, 254, 118));
         btnDiv.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btnDiv.setText("/");
+        btnDiv.setText("÷");
         btnDiv.setToolTipText("");
         btnDiv.setMaximumSize(new java.awt.Dimension(80, 80));
         btnDiv.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -658,7 +658,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(pnlContainerLayout.createSequentialGroup()
                 .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContainerLayout.createSequentialGroup()
-                        .addContainerGap(20, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(seperator, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblClear))

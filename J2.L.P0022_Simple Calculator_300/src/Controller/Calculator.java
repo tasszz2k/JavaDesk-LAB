@@ -6,6 +6,8 @@
 package Controller;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -90,7 +92,7 @@ public class Calculator {
                         isProcessing = false;
                         return;
                     } else {
-                        firstNumber = firstNumber.divide(secondNumber);
+                        firstNumber = firstNumber.divide(secondNumber, MathContext.DECIMAL64);
                     }
                     break;
                 default:
@@ -128,7 +130,7 @@ public class Calculator {
         if (!isERROR()) {
             try {
                 BigDecimal bd100 = new BigDecimal("100");
-                txt.setText(getValueFromScreen().divide(bd100) + "");
+                txt.setText(getValueFromScreen().divide(bd100, MathContext.DECIMAL64) + "");
             } catch (Exception e) {
                 txt.setText("ERROR");
             }
@@ -142,15 +144,38 @@ public class Calculator {
         if (!isERROR()) {
             try {
                 BigDecimal bd1 = new BigDecimal("1");
-                System.out.println(bd1.divide(getValueFromScreen()));
-                txt.setText(bd1.divide(getValueFromScreen()) + "");
-               
+                txt.setText(bd1.divide(getValueFromScreen(), MathContext.DECIMAL64) + "");
+
             } catch (Exception e) {
                 txt.setText("ERROR");
                 System.out.println(e.toString());
             }
         } else {
             txt.setText("0");
+        }
+        isProcessing = true;
+    }
+
+    // Memory : Press MC, MR, M+, M-
+    public void pressMC() {
+        memory = BigDecimal.valueOf(0);
+    }
+
+    public void pressMR() {
+        txt.setText(memory + "");
+        isProcessing = true;
+    }
+
+    public void pressMAdd() {
+        if (!isERROR()) {
+            memory = memory.add(getValueFromScreen());
+        }
+        isProcessing = true;
+    }
+
+    public void pressMSub() {
+        if (!isERROR()) {
+            memory = memory.subtract(getValueFromScreen());
         }
         isProcessing = true;
     }

@@ -281,19 +281,19 @@ public class Controller {
     }
 
     private void btnMCActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+          calculator.pressMC();
     }
 
     private void btnMRActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+         calculator.pressMR();
     }
 
     private void btnMAddActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        calculator.pressMAdd();
     }
 
     private void btnMSubActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+          calculator.pressMSub();
     }
 
     private void btnSqrtActionPerformed(java.awt.event.ActionEvent evt) {
