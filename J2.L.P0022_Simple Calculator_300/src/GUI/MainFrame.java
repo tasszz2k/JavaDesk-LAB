@@ -5,7 +5,11 @@
  */
 package GUI;
 
-import Controller.Calculator;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import javax.swing.JTextField;
 
 /**
  *
@@ -13,13 +17,239 @@ import Controller.Calculator;
  */
 public class MainFrame extends javax.swing.JFrame {
 
-    Calculator calculator;
     /**
      * Creates new form Main
      */
     public MainFrame() {
         initComponents();
     }
+
+    public JButton getBtn0() {
+        return btn0;
+    }
+
+    public void setBtn0(JButton btn0) {
+        this.btn0 = btn0;
+    }
+
+    public JButton getBtn1() {
+        return btn1;
+    }
+
+    public void setBtn1(JButton btn1) {
+        this.btn1 = btn1;
+    }
+
+    public JButton getBtn2() {
+        return btn2;
+    }
+
+    public void setBtn2(JButton btn2) {
+        this.btn2 = btn2;
+    }
+
+    public JButton getBtn3() {
+        return btn3;
+    }
+
+    public void setBtn3(JButton btn3) {
+        this.btn3 = btn3;
+    }
+
+    public JButton getBtn4() {
+        return btn4;
+    }
+
+    public void setBtn4(JButton btn4) {
+        this.btn4 = btn4;
+    }
+
+    public JButton getBtn5() {
+        return btn5;
+    }
+
+    public void setBtn5(JButton btn5) {
+        this.btn5 = btn5;
+    }
+
+    public JButton getBtn6() {
+        return btn6;
+    }
+
+    public void setBtn6(JButton btn6) {
+        this.btn6 = btn6;
+    }
+
+    public JButton getBtn7() {
+        return btn7;
+    }
+
+    public void setBtn7(JButton btn7) {
+        this.btn7 = btn7;
+    }
+
+    public JButton getBtn8() {
+        return btn8;
+    }
+
+    public void setBtn8(JButton btn8) {
+        this.btn8 = btn8;
+    }
+
+    public JButton getBtn9() {
+        return btn9;
+    }
+
+    public void setBtn9(JButton btn9) {
+        this.btn9 = btn9;
+    }
+
+    public JButton getBtnAdd() {
+        return btnAdd;
+    }
+
+    public void setBtnAdd(JButton btnAdd) {
+        this.btnAdd = btnAdd;
+    }
+
+    public JButton getBtnDiv() {
+        return btnDiv;
+    }
+
+    public void setBtnDiv(JButton btnDiv) {
+        this.btnDiv = btnDiv;
+    }
+
+    public JButton getBtnDot() {
+        return btnDot;
+    }
+
+    public void setBtnDot(JButton btnDot) {
+        this.btnDot = btnDot;
+    }
+
+    public JButton getBtnInverse() {
+        return btnInverse;
+    }
+
+    public void setBtnInverse(JButton btnInverse) {
+        this.btnInverse = btnInverse;
+    }
+
+    public JButton getBtnMAdd() {
+        return btnMAdd;
+    }
+
+    public void setBtnMAdd(JButton btnMAdd) {
+        this.btnMAdd = btnMAdd;
+    }
+
+    public JButton getBtnMC() {
+        return btnMC;
+    }
+
+    public void setBtnMC(JButton btnMC) {
+        this.btnMC = btnMC;
+    }
+
+    public JButton getBtnMR() {
+        return btnMR;
+    }
+
+    public void setBtnMR(JButton btnMR) {
+        this.btnMR = btnMR;
+    }
+
+    public JButton getBtnMSub() {
+        return btnMSub;
+    }
+
+    public void setBtnMSub(JButton btnMSub) {
+        this.btnMSub = btnMSub;
+    }
+
+    public JButton getBtnMul() {
+        return btnMul;
+    }
+
+    public void setBtnMul(JButton btnMul) {
+        this.btnMul = btnMul;
+    }
+
+    public JButton getBtnNegate() {
+        return btnNegate;
+    }
+
+    public void setBtnNegate(JButton btnNegate) {
+        this.btnNegate = btnNegate;
+    }
+
+    public JButton getBtnPercent() {
+        return btnPercent;
+    }
+
+    public void setBtnPercent(JButton btnPercent) {
+        this.btnPercent = btnPercent;
+    }
+
+    public JButton getBtnResult() {
+        return btnResult;
+    }
+
+    public void setBtnResult(JButton btnResult) {
+        this.btnResult = btnResult;
+    }
+
+    public JButton getBtnSqrt() {
+        return btnSqrt;
+    }
+
+    public void setBtnSqrt(JButton btnSqrt) {
+        this.btnSqrt = btnSqrt;
+    }
+
+    public JButton getBtnSub() {
+        return btnSub;
+    }
+
+    public void setBtnSub(JButton btnSub) {
+        this.btnSub = btnSub;
+    }
+
+    public JLabel getLblClear() {
+        return lblClear;
+    }
+
+    public void setLblClear(JLabel lblClear) {
+        this.lblClear = lblClear;
+    }
+
+    public JPanel getPnlContainer() {
+        return pnlContainer;
+    }
+
+    public void setPnlContainer(JPanel pnlContainer) {
+        this.pnlContainer = pnlContainer;
+    }
+
+    public JSeparator getSeperator() {
+        return seperator;
+    }
+
+    public void setSeperator(JSeparator seperator) {
+        this.seperator = seperator;
+    }
+
+    public JTextField getTxtScreen() {
+        return txtScreen;
+    }
+
+    public void setTxtScreen(JTextField txtScreen) {
+        this.txtScreen = txtScreen;
+    }
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
