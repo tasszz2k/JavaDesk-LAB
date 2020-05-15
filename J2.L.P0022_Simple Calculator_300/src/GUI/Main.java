@@ -78,7 +78,7 @@ public class Main extends javax.swing.JFrame {
 
         btn3.setBackground(new java.awt.Color(255, 219, 132));
         btn3.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn3.setText("MR");
+        btn3.setText("MC");
         btn3.setToolTipText("");
         btn3.setMaximumSize(new java.awt.Dimension(80, 80));
         btn3.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -96,7 +96,7 @@ public class Main extends javax.swing.JFrame {
 
         btn9.setBackground(new java.awt.Color(255, 219, 132));
         btn9.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn9.setText("MR");
+        btn9.setText("M+");
         btn9.setToolTipText("");
         btn9.setMaximumSize(new java.awt.Dimension(80, 80));
         btn9.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -105,7 +105,7 @@ public class Main extends javax.swing.JFrame {
 
         btn10.setBackground(new java.awt.Color(255, 219, 132));
         btn10.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn10.setText("MR");
+        btn10.setText("M-");
         btn10.setToolTipText("");
         btn10.setMaximumSize(new java.awt.Dimension(80, 80));
         btn10.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -114,7 +114,7 @@ public class Main extends javax.swing.JFrame {
 
         btn11.setBackground(new java.awt.Color(103, 254, 118));
         btn11.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn11.setText("MR");
+        btn11.setText("√");
         btn11.setToolTipText("");
         btn11.setMaximumSize(new java.awt.Dimension(80, 80));
         btn11.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -123,16 +123,21 @@ public class Main extends javax.swing.JFrame {
 
         btn4.setBackground(new java.awt.Color(195, 208, 254));
         btn4.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn4.setText("MR");
+        btn4.setText("7");
         btn4.setToolTipText("");
         btn4.setMaximumSize(new java.awt.Dimension(80, 80));
         btn4.setMinimumSize(new java.awt.Dimension(80, 80));
         btn4.setPreferredSize(new java.awt.Dimension(80, 80));
         btn4.setRequestFocusEnabled(false);
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
 
         btn6.setBackground(new java.awt.Color(195, 208, 254));
         btn6.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn6.setText("MR");
+        btn6.setText("8");
         btn6.setToolTipText("");
         btn6.setMaximumSize(new java.awt.Dimension(80, 80));
         btn6.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -141,7 +146,7 @@ public class Main extends javax.swing.JFrame {
 
         btn12.setBackground(new java.awt.Color(195, 208, 254));
         btn12.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn12.setText("MR");
+        btn12.setText("9");
         btn12.setToolTipText("");
         btn12.setMaximumSize(new java.awt.Dimension(80, 80));
         btn12.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -150,7 +155,7 @@ public class Main extends javax.swing.JFrame {
 
         btn13.setBackground(new java.awt.Color(103, 254, 118));
         btn13.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn13.setText("MR");
+        btn13.setText("/");
         btn13.setToolTipText("");
         btn13.setMaximumSize(new java.awt.Dimension(80, 80));
         btn13.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -159,7 +164,7 @@ public class Main extends javax.swing.JFrame {
 
         btn14.setBackground(new java.awt.Color(103, 254, 118));
         btn14.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn14.setText("MR");
+        btn14.setText("%");
         btn14.setToolTipText("");
         btn14.setMaximumSize(new java.awt.Dimension(80, 80));
         btn14.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -168,7 +173,7 @@ public class Main extends javax.swing.JFrame {
 
         btn7.setBackground(new java.awt.Color(195, 208, 254));
         btn7.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn7.setText("MR");
+        btn7.setText("4");
         btn7.setToolTipText("");
         btn7.setMaximumSize(new java.awt.Dimension(80, 80));
         btn7.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -177,7 +182,7 @@ public class Main extends javax.swing.JFrame {
 
         btn8.setBackground(new java.awt.Color(195, 208, 254));
         btn8.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn8.setText("MR");
+        btn8.setText("1");
         btn8.setToolTipText("");
         btn8.setMaximumSize(new java.awt.Dimension(80, 80));
         btn8.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -186,7 +191,7 @@ public class Main extends javax.swing.JFrame {
 
         btn15.setBackground(new java.awt.Color(195, 208, 254));
         btn15.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn15.setText("MR");
+        btn15.setText("2");
         btn15.setToolTipText("");
         btn15.setMaximumSize(new java.awt.Dimension(80, 80));
         btn15.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -195,7 +200,7 @@ public class Main extends javax.swing.JFrame {
 
         btn16.setBackground(new java.awt.Color(195, 208, 254));
         btn16.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn16.setText("MR");
+        btn16.setText("5");
         btn16.setToolTipText("");
         btn16.setMaximumSize(new java.awt.Dimension(80, 80));
         btn16.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -204,7 +209,7 @@ public class Main extends javax.swing.JFrame {
 
         btn17.setBackground(new java.awt.Color(195, 208, 254));
         btn17.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn17.setText("MR");
+        btn17.setText("6");
         btn17.setToolTipText("");
         btn17.setMaximumSize(new java.awt.Dimension(80, 80));
         btn17.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -213,7 +218,7 @@ public class Main extends javax.swing.JFrame {
 
         btn18.setBackground(new java.awt.Color(195, 208, 254));
         btn18.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn18.setText("MR");
+        btn18.setText("3");
         btn18.setToolTipText("");
         btn18.setMaximumSize(new java.awt.Dimension(80, 80));
         btn18.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -222,7 +227,7 @@ public class Main extends javax.swing.JFrame {
 
         btn19.setBackground(new java.awt.Color(103, 254, 118));
         btn19.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn19.setText("MR");
+        btn19.setText("-");
         btn19.setToolTipText("");
         btn19.setMaximumSize(new java.awt.Dimension(80, 80));
         btn19.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -231,7 +236,7 @@ public class Main extends javax.swing.JFrame {
 
         btn20.setBackground(new java.awt.Color(103, 254, 118));
         btn20.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn20.setText("MR");
+        btn20.setText("x");
         btn20.setToolTipText("");
         btn20.setMaximumSize(new java.awt.Dimension(80, 80));
         btn20.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -239,8 +244,8 @@ public class Main extends javax.swing.JFrame {
         btn20.setRequestFocusEnabled(false);
 
         btn21.setBackground(new java.awt.Color(103, 254, 118));
-        btn21.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn21.setText("MR");
+        btn21.setFont(new java.awt.Font("Consolas", 1, 28)); // NOI18N
+        btn21.setText("1/x");
         btn21.setToolTipText("");
         btn21.setMaximumSize(new java.awt.Dimension(80, 80));
         btn21.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -249,7 +254,7 @@ public class Main extends javax.swing.JFrame {
 
         btn22.setBackground(new java.awt.Color(103, 254, 118));
         btn22.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn22.setText("MR");
+        btn22.setText("=");
         btn22.setToolTipText("");
         btn22.setMaximumSize(new java.awt.Dimension(80, 80));
         btn22.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -258,7 +263,7 @@ public class Main extends javax.swing.JFrame {
 
         btn24.setBackground(new java.awt.Color(103, 254, 118));
         btn24.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn24.setText("MR");
+        btn24.setText("+");
         btn24.setToolTipText("");
         btn24.setMaximumSize(new java.awt.Dimension(80, 80));
         btn24.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -266,8 +271,8 @@ public class Main extends javax.swing.JFrame {
         btn24.setRequestFocusEnabled(false);
 
         btn25.setBackground(new java.awt.Color(103, 254, 118));
-        btn25.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn25.setText("MR");
+        btn25.setFont(new java.awt.Font("Consolas", 1, 28)); // NOI18N
+        btn25.setText("+/_");
         btn25.setToolTipText("");
         btn25.setMaximumSize(new java.awt.Dimension(80, 80));
         btn25.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -276,7 +281,7 @@ public class Main extends javax.swing.JFrame {
 
         btn26.setBackground(new java.awt.Color(195, 208, 254));
         btn26.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn26.setText("MR");
+        btn26.setText(".");
         btn26.setToolTipText("");
         btn26.setMaximumSize(new java.awt.Dimension(80, 80));
         btn26.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -285,7 +290,7 @@ public class Main extends javax.swing.JFrame {
 
         btn27.setBackground(new java.awt.Color(195, 208, 254));
         btn27.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn27.setText("MR");
+        btn27.setText("0");
         btn27.setToolTipText("");
         btn27.setMaximumSize(new java.awt.Dimension(80, 80));
         btn27.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -433,6 +438,10 @@ public class Main extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn4ActionPerformed
 
     /**
      * @param args the command line arguments

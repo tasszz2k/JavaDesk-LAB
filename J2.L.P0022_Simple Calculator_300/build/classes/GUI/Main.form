@@ -235,7 +235,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="MC"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -279,7 +279,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="M+"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -301,7 +301,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="M-"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -323,7 +323,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="&#x221a;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -345,7 +345,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="7"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -358,6 +358,9 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn6">
           <Properties>
@@ -367,7 +370,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="8"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -389,7 +392,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="9"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -411,7 +414,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="/"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -433,7 +436,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="%"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -455,7 +458,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="4"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -477,7 +480,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="1"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -499,7 +502,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="2"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -521,7 +524,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="5"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -543,7 +546,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="6"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -565,7 +568,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="3"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -587,7 +590,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="-"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -609,7 +612,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="x"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -629,9 +632,9 @@
               <Color blue="76" green="fe" red="67" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="30" style="1"/>
+              <Font name="Consolas" size="28" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="1/x"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -653,7 +656,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="="/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -675,7 +678,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="+"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -695,9 +698,9 @@
               <Color blue="76" green="fe" red="67" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Consolas" size="30" style="1"/>
+              <Font name="Consolas" size="28" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="+/_"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -719,7 +722,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="."/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
@@ -741,7 +744,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="30" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="MR"/>
+            <Property name="text" type="java.lang.String" value="0"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[80, 80]"/>
