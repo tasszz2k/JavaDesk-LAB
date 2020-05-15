@@ -31,6 +31,7 @@ public class Calculator {
         secondNumber = new BigDecimal("0");
         operator = -1;
         isProcessing = false;
+
     }
 
     public void pressClear() {
@@ -42,12 +43,19 @@ public class Calculator {
     }
 
     public void pressNumber(int number) {
-        if (isProcessing || isERROR()) {
+
+        if (isProcessing || isERROR() || txt.getText().compareTo("0") == 0) {
             txt.setText(number + "");
             isProcessing = false;
         } else {
-            BigDecimal temp = new BigDecimal(txt.getText() + number);
-            txt.setText(temp + "");
+            //max length number of Input = 10
+            if (txt.getText().length() <= 10) {
+                System.out.println(getValueFromScreen().scale());
+                //0.0000000x : if x != 0 --> Accept
+                if (getValueFromScreen().scale() <= 7 || (getValueFromScreen().scale() <= 8 && number != 0)) {
+                    txt.setText(txt.getText() + number);
+                }
+            }
         }
 
     }
@@ -78,22 +86,23 @@ public class Calculator {
             secondNumber = getValueFromScreen();
             switch (operator) {
                 case 1:
-                    firstNumber = firstNumber.add(secondNumber);
+                    firstNumber = firstNumber.add(secondNumber, MathContext.DECIMAL32);
                     break;
                 case 2:
-                    firstNumber = firstNumber.subtract(secondNumber);
+                    firstNumber = firstNumber.subtract(secondNumber, MathContext.DECIMAL32);
                     break;
                 case 3:
-                    firstNumber = firstNumber.multiply(secondNumber);
+                    firstNumber = firstNumber.multiply(secondNumber, MathContext.DECIMAL32);
                     break;
                 case 4:
-                    if (secondNumber.toString().equals("0")) {
+                    try {
+                        firstNumber = firstNumber.divide(secondNumber, MathContext.DECIMAL32);
+                    } catch (Exception e) {
                         txt.setText("ERROR");
                         isProcessing = false;
                         return;
-                    } else {
-                        firstNumber = firstNumber.divide(secondNumber, MathContext.DECIMAL64);
                     }
+
                     break;
                 default:
                     firstNumber = getValueFromScreen();
@@ -116,7 +125,7 @@ public class Calculator {
             try {
                 double value = getValueFromScreen().doubleValue();
                 String valueString = Math.sqrt(value) + "";
-                txt.setText(new BigDecimal(valueString).stripTrailingZeros() + "");
+                txt.setText(new BigDecimal(valueString, MathContext.DECIMAL32).stripTrailingZeros() + "");
             } catch (Exception e) {
                 txt.setText("ERROR");
             }
@@ -130,7 +139,7 @@ public class Calculator {
         if (!isERROR()) {
             try {
                 BigDecimal bd100 = new BigDecimal("100");
-                txt.setText(getValueFromScreen().divide(bd100, MathContext.DECIMAL64) + "");
+                txt.setText(getValueFromScreen().divide(bd100, MathContext.DECIMAL32) + "");
             } catch (Exception e) {
                 txt.setText("ERROR");
             }
@@ -144,7 +153,7 @@ public class Calculator {
         if (!isERROR()) {
             try {
                 BigDecimal bd1 = new BigDecimal("1");
-                txt.setText(bd1.divide(getValueFromScreen(), MathContext.DECIMAL64) + "");
+                txt.setText(bd1.divide(getValueFromScreen(), MathContext.DECIMAL32) + "");
 
             } catch (Exception e) {
                 txt.setText("ERROR");
@@ -168,14 +177,14 @@ public class Calculator {
 
     public void pressMAdd() {
         if (!isERROR()) {
-            memory = memory.add(getValueFromScreen());
+            memory = memory.add(getValueFromScreen(), MathContext.DECIMAL32);
         }
         isProcessing = true;
     }
 
     public void pressMSub() {
         if (!isERROR()) {
-            memory = memory.subtract(getValueFromScreen());
+            memory = memory.subtract(getValueFromScreen(), MathContext.DECIMAL32);
         }
         isProcessing = true;
     }
