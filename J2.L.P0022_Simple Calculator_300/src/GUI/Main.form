@@ -24,7 +24,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="pnContainer" min="-2" max="-2" attributes="0"/>
+              <Component id="pnlContainer" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -32,14 +32,14 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="pnContainer" min="-2" max="-2" attributes="0"/>
+              <Component id="pnlContainer" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="pnContainer">
+    <Container class="javax.swing.JPanel" name="pnlContainer">
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -47,7 +47,7 @@
           </Border>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[500, 700]"/>
+          <Dimension value="[500, 630]"/>
         </Property>
       </Properties>
 
@@ -58,75 +58,75 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="20" max="32767" attributes="0"/>
-                          <Component id="jSeparator1" min="-2" pref="371" max="-2" attributes="0"/>
+                          <Component id="seperator" min="-2" pref="371" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblClear" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="btn4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btn6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn8" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="btn12" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn9" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btn13" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnDiv" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                  <Component id="btn14" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnPercent" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextField1" min="-2" pref="472" max="-2" attributes="0"/>
+                                      <Component id="txtScreen" min="-2" pref="472" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="btn3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnMC" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btn5" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnMR" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="btn9" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnMAdd" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btn10" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnMSub" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                          <Component id="btn11" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnSqrt" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="btn7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn4" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btn16" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn5" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="btn17" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btn20" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMul" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                  <Component id="btn21" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnInverse" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="btn8" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btn15" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="btn18" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn3" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btn19" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnSub" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="btn27" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn0" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btn26" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnDot" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="btn25" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnNegate" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="btn24" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnAdd" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                  <Component id="btn22" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnResult" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -139,65 +139,65 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                  <Component id="jTextField1" min="-2" pref="85" max="-2" attributes="0"/>
+                  <Component id="txtScreen" min="-2" pref="85" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblClear" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
-                          <Component id="jSeparator1" min="-2" max="-2" attributes="0"/>
+                          <Component id="seperator" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btn3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMC" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMSub" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSqrt" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMR" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btn4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn13" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn14" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnDiv" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnPercent" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn8" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btn7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn20" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn21" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn17" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn16" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnMul" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnInverse" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btn8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn19" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn18" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnSub" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btn27" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn24" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn25" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn26" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn0" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAdd" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnNegate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnDot" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="btn22" max="32767" attributes="0"/>
+                      <Component id="btnResult" min="-2" pref="170" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtScreen">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Consolas" size="48" style="1"/>
@@ -209,17 +209,17 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtScreenActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JSeparator" name="jSeparator1">
+        <Component class="javax.swing.JSeparator" name="seperator">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="48" style="1"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lblClear">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -227,7 +227,7 @@
             <Property name="text" type="java.lang.String" value="All Clear"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn3">
+        <Component class="javax.swing.JButton" name="btnMC">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="84" green="db" red="ff" type="rgb"/>
@@ -248,8 +248,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMCActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn5">
+        <Component class="javax.swing.JButton" name="btnMR">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="84" green="db" red="ff" type="rgb"/>
@@ -270,8 +273,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMRActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn9">
+        <Component class="javax.swing.JButton" name="btnMAdd">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="84" green="db" red="ff" type="rgb"/>
@@ -292,8 +298,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMAddActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn10">
+        <Component class="javax.swing.JButton" name="btnMSub">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="84" green="db" red="ff" type="rgb"/>
@@ -314,8 +323,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMSubActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn11">
+        <Component class="javax.swing.JButton" name="btnSqrt">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -336,8 +348,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSqrtActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn4">
+        <Component class="javax.swing.JButton" name="btn7">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -359,10 +374,10 @@
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn7ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn6">
+        <Component class="javax.swing.JButton" name="btn8">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -383,8 +398,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn8ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn12">
+        <Component class="javax.swing.JButton" name="btn9">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -405,8 +423,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn9ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn13">
+        <Component class="javax.swing.JButton" name="btnDiv">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -427,8 +448,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDivActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn14">
+        <Component class="javax.swing.JButton" name="btnPercent">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -449,8 +473,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPercentActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn7">
+        <Component class="javax.swing.JButton" name="btn4">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -471,8 +498,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn8">
+        <Component class="javax.swing.JButton" name="btn1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -493,8 +523,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn15">
+        <Component class="javax.swing.JButton" name="btn2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -515,8 +548,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn16">
+        <Component class="javax.swing.JButton" name="btn5">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -537,8 +573,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn5ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn17">
+        <Component class="javax.swing.JButton" name="btn6">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -559,8 +598,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn6ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn18">
+        <Component class="javax.swing.JButton" name="btn3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -581,8 +623,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn19">
+        <Component class="javax.swing.JButton" name="btnSub">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -603,8 +648,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn20">
+        <Component class="javax.swing.JButton" name="btnMul">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -625,8 +673,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMulActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn21">
+        <Component class="javax.swing.JButton" name="btnInverse">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -647,8 +698,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInverseActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn22">
+        <Component class="javax.swing.JButton" name="btnResult">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -669,8 +723,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResultActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn24">
+        <Component class="javax.swing.JButton" name="btnAdd">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -691,8 +748,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn25">
+        <Component class="javax.swing.JButton" name="btnNegate">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="76" green="fe" red="67" type="rgb"/>
@@ -713,8 +773,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNegateActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn26">
+        <Component class="javax.swing.JButton" name="btnDot">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -735,8 +798,11 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDotActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn27">
+        <Component class="javax.swing.JButton" name="btn0">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fe" green="d0" red="c3" type="rgb"/>
@@ -757,6 +823,9 @@
             </Property>
             <Property name="requestFocusEnabled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn0ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

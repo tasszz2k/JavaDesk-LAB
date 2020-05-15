@@ -5,12 +5,15 @@
  */
 package GUI;
 
+import Controller.Calculator;
+
 /**
  *
  * @author TASS
  */
 public class Main extends javax.swing.JFrame {
 
+    Calculator calculator;
     /**
      * Creates new form Main
      */
@@ -27,103 +30,198 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnContainer = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel1 = new javax.swing.JLabel();
-        btn3 = new javax.swing.JButton();
-        btn5 = new javax.swing.JButton();
-        btn9 = new javax.swing.JButton();
-        btn10 = new javax.swing.JButton();
-        btn11 = new javax.swing.JButton();
-        btn4 = new javax.swing.JButton();
-        btn6 = new javax.swing.JButton();
-        btn12 = new javax.swing.JButton();
-        btn13 = new javax.swing.JButton();
-        btn14 = new javax.swing.JButton();
+        pnlContainer = new javax.swing.JPanel();
+        txtScreen = new javax.swing.JTextField();
+        seperator = new javax.swing.JSeparator();
+        lblClear = new javax.swing.JLabel();
+        btnMC = new javax.swing.JButton();
+        btnMR = new javax.swing.JButton();
+        btnMAdd = new javax.swing.JButton();
+        btnMSub = new javax.swing.JButton();
+        btnSqrt = new javax.swing.JButton();
         btn7 = new javax.swing.JButton();
         btn8 = new javax.swing.JButton();
-        btn15 = new javax.swing.JButton();
-        btn16 = new javax.swing.JButton();
-        btn17 = new javax.swing.JButton();
-        btn18 = new javax.swing.JButton();
-        btn19 = new javax.swing.JButton();
-        btn20 = new javax.swing.JButton();
-        btn21 = new javax.swing.JButton();
-        btn22 = new javax.swing.JButton();
-        btn24 = new javax.swing.JButton();
-        btn25 = new javax.swing.JButton();
-        btn26 = new javax.swing.JButton();
-        btn27 = new javax.swing.JButton();
+        btn9 = new javax.swing.JButton();
+        btnDiv = new javax.swing.JButton();
+        btnPercent = new javax.swing.JButton();
+        btn4 = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        btn5 = new javax.swing.JButton();
+        btn6 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        btnSub = new javax.swing.JButton();
+        btnMul = new javax.swing.JButton();
+        btnInverse = new javax.swing.JButton();
+        btnResult = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
+        btnNegate = new javax.swing.JButton();
+        btnDot = new javax.swing.JButton();
+        btn0 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnContainer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        pnContainer.setPreferredSize(new java.awt.Dimension(500, 700));
+        pnlContainer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        pnlContainer.setPreferredSize(new java.awt.Dimension(500, 630));
 
-        jTextField1.setFont(new java.awt.Font("Consolas", 1, 48)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("0");
-        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtScreen.setFont(new java.awt.Font("Consolas", 1, 48)); // NOI18N
+        txtScreen.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtScreen.setText("0");
+        txtScreen.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        txtScreen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtScreenActionPerformed(evt);
             }
         });
 
-        jSeparator1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        seperator.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("All Clear");
+        lblClear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lblClear.setText("All Clear");
 
-        btn3.setBackground(new java.awt.Color(255, 219, 132));
-        btn3.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn3.setText("MC");
-        btn3.setToolTipText("");
-        btn3.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn3.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn3.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn3.setRequestFocusEnabled(false);
+        btnMC.setBackground(new java.awt.Color(255, 219, 132));
+        btnMC.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnMC.setText("MC");
+        btnMC.setToolTipText("");
+        btnMC.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnMC.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnMC.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnMC.setRequestFocusEnabled(false);
+        btnMC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMCActionPerformed(evt);
+            }
+        });
 
-        btn5.setBackground(new java.awt.Color(255, 219, 132));
-        btn5.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn5.setText("MR");
-        btn5.setToolTipText("");
-        btn5.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn5.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn5.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn5.setRequestFocusEnabled(false);
+        btnMR.setBackground(new java.awt.Color(255, 219, 132));
+        btnMR.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnMR.setText("MR");
+        btnMR.setToolTipText("");
+        btnMR.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnMR.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnMR.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnMR.setRequestFocusEnabled(false);
+        btnMR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMRActionPerformed(evt);
+            }
+        });
 
-        btn9.setBackground(new java.awt.Color(255, 219, 132));
+        btnMAdd.setBackground(new java.awt.Color(255, 219, 132));
+        btnMAdd.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnMAdd.setText("M+");
+        btnMAdd.setToolTipText("");
+        btnMAdd.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnMAdd.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnMAdd.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnMAdd.setRequestFocusEnabled(false);
+        btnMAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMAddActionPerformed(evt);
+            }
+        });
+
+        btnMSub.setBackground(new java.awt.Color(255, 219, 132));
+        btnMSub.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnMSub.setText("M-");
+        btnMSub.setToolTipText("");
+        btnMSub.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnMSub.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnMSub.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnMSub.setRequestFocusEnabled(false);
+        btnMSub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMSubActionPerformed(evt);
+            }
+        });
+
+        btnSqrt.setBackground(new java.awt.Color(103, 254, 118));
+        btnSqrt.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnSqrt.setText("√");
+        btnSqrt.setToolTipText("");
+        btnSqrt.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnSqrt.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnSqrt.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnSqrt.setRequestFocusEnabled(false);
+        btnSqrt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSqrtActionPerformed(evt);
+            }
+        });
+
+        btn7.setBackground(new java.awt.Color(195, 208, 254));
+        btn7.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btn7.setText("7");
+        btn7.setToolTipText("");
+        btn7.setMaximumSize(new java.awt.Dimension(80, 80));
+        btn7.setMinimumSize(new java.awt.Dimension(80, 80));
+        btn7.setPreferredSize(new java.awt.Dimension(80, 80));
+        btn7.setRequestFocusEnabled(false);
+        btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn7ActionPerformed(evt);
+            }
+        });
+
+        btn8.setBackground(new java.awt.Color(195, 208, 254));
+        btn8.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btn8.setText("8");
+        btn8.setToolTipText("");
+        btn8.setMaximumSize(new java.awt.Dimension(80, 80));
+        btn8.setMinimumSize(new java.awt.Dimension(80, 80));
+        btn8.setPreferredSize(new java.awt.Dimension(80, 80));
+        btn8.setRequestFocusEnabled(false);
+        btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8ActionPerformed(evt);
+            }
+        });
+
+        btn9.setBackground(new java.awt.Color(195, 208, 254));
         btn9.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn9.setText("M+");
+        btn9.setText("9");
         btn9.setToolTipText("");
         btn9.setMaximumSize(new java.awt.Dimension(80, 80));
         btn9.setMinimumSize(new java.awt.Dimension(80, 80));
         btn9.setPreferredSize(new java.awt.Dimension(80, 80));
         btn9.setRequestFocusEnabled(false);
+        btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn9ActionPerformed(evt);
+            }
+        });
 
-        btn10.setBackground(new java.awt.Color(255, 219, 132));
-        btn10.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn10.setText("M-");
-        btn10.setToolTipText("");
-        btn10.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn10.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn10.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn10.setRequestFocusEnabled(false);
+        btnDiv.setBackground(new java.awt.Color(103, 254, 118));
+        btnDiv.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnDiv.setText("/");
+        btnDiv.setToolTipText("");
+        btnDiv.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnDiv.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnDiv.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnDiv.setRequestFocusEnabled(false);
+        btnDiv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDivActionPerformed(evt);
+            }
+        });
 
-        btn11.setBackground(new java.awt.Color(103, 254, 118));
-        btn11.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn11.setText("√");
-        btn11.setToolTipText("");
-        btn11.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn11.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn11.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn11.setRequestFocusEnabled(false);
+        btnPercent.setBackground(new java.awt.Color(103, 254, 118));
+        btnPercent.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnPercent.setText("%");
+        btnPercent.setToolTipText("");
+        btnPercent.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnPercent.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnPercent.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnPercent.setRequestFocusEnabled(false);
+        btnPercent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPercentActionPerformed(evt);
+            }
+        });
 
         btn4.setBackground(new java.awt.Color(195, 208, 254));
         btn4.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn4.setText("7");
+        btn4.setText("4");
         btn4.setToolTipText("");
         btn4.setMaximumSize(new java.awt.Dimension(80, 80));
         btn4.setMinimumSize(new java.awt.Dimension(80, 80));
@@ -135,286 +233,306 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        btn1.setBackground(new java.awt.Color(195, 208, 254));
+        btn1.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btn1.setText("1");
+        btn1.setToolTipText("");
+        btn1.setMaximumSize(new java.awt.Dimension(80, 80));
+        btn1.setMinimumSize(new java.awt.Dimension(80, 80));
+        btn1.setPreferredSize(new java.awt.Dimension(80, 80));
+        btn1.setRequestFocusEnabled(false);
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
+
+        btn2.setBackground(new java.awt.Color(195, 208, 254));
+        btn2.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btn2.setText("2");
+        btn2.setToolTipText("");
+        btn2.setMaximumSize(new java.awt.Dimension(80, 80));
+        btn2.setMinimumSize(new java.awt.Dimension(80, 80));
+        btn2.setPreferredSize(new java.awt.Dimension(80, 80));
+        btn2.setRequestFocusEnabled(false);
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
+
+        btn5.setBackground(new java.awt.Color(195, 208, 254));
+        btn5.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btn5.setText("5");
+        btn5.setToolTipText("");
+        btn5.setMaximumSize(new java.awt.Dimension(80, 80));
+        btn5.setMinimumSize(new java.awt.Dimension(80, 80));
+        btn5.setPreferredSize(new java.awt.Dimension(80, 80));
+        btn5.setRequestFocusEnabled(false);
+        btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn5ActionPerformed(evt);
+            }
+        });
+
         btn6.setBackground(new java.awt.Color(195, 208, 254));
         btn6.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn6.setText("8");
+        btn6.setText("6");
         btn6.setToolTipText("");
         btn6.setMaximumSize(new java.awt.Dimension(80, 80));
         btn6.setMinimumSize(new java.awt.Dimension(80, 80));
         btn6.setPreferredSize(new java.awt.Dimension(80, 80));
         btn6.setRequestFocusEnabled(false);
+        btn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn6ActionPerformed(evt);
+            }
+        });
 
-        btn12.setBackground(new java.awt.Color(195, 208, 254));
-        btn12.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn12.setText("9");
-        btn12.setToolTipText("");
-        btn12.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn12.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn12.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn12.setRequestFocusEnabled(false);
+        btn3.setBackground(new java.awt.Color(195, 208, 254));
+        btn3.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btn3.setText("3");
+        btn3.setToolTipText("");
+        btn3.setMaximumSize(new java.awt.Dimension(80, 80));
+        btn3.setMinimumSize(new java.awt.Dimension(80, 80));
+        btn3.setPreferredSize(new java.awt.Dimension(80, 80));
+        btn3.setRequestFocusEnabled(false);
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
 
-        btn13.setBackground(new java.awt.Color(103, 254, 118));
-        btn13.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn13.setText("/");
-        btn13.setToolTipText("");
-        btn13.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn13.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn13.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn13.setRequestFocusEnabled(false);
+        btnSub.setBackground(new java.awt.Color(103, 254, 118));
+        btnSub.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnSub.setText("-");
+        btnSub.setToolTipText("");
+        btnSub.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnSub.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnSub.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnSub.setRequestFocusEnabled(false);
+        btnSub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubActionPerformed(evt);
+            }
+        });
 
-        btn14.setBackground(new java.awt.Color(103, 254, 118));
-        btn14.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn14.setText("%");
-        btn14.setToolTipText("");
-        btn14.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn14.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn14.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn14.setRequestFocusEnabled(false);
+        btnMul.setBackground(new java.awt.Color(103, 254, 118));
+        btnMul.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnMul.setText("x");
+        btnMul.setToolTipText("");
+        btnMul.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnMul.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnMul.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnMul.setRequestFocusEnabled(false);
+        btnMul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMulActionPerformed(evt);
+            }
+        });
 
-        btn7.setBackground(new java.awt.Color(195, 208, 254));
-        btn7.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn7.setText("4");
-        btn7.setToolTipText("");
-        btn7.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn7.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn7.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn7.setRequestFocusEnabled(false);
+        btnInverse.setBackground(new java.awt.Color(103, 254, 118));
+        btnInverse.setFont(new java.awt.Font("Consolas", 1, 28)); // NOI18N
+        btnInverse.setText("1/x");
+        btnInverse.setToolTipText("");
+        btnInverse.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnInverse.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnInverse.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnInverse.setRequestFocusEnabled(false);
+        btnInverse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInverseActionPerformed(evt);
+            }
+        });
 
-        btn8.setBackground(new java.awt.Color(195, 208, 254));
-        btn8.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn8.setText("1");
-        btn8.setToolTipText("");
-        btn8.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn8.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn8.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn8.setRequestFocusEnabled(false);
+        btnResult.setBackground(new java.awt.Color(103, 254, 118));
+        btnResult.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnResult.setText("=");
+        btnResult.setToolTipText("");
+        btnResult.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnResult.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnResult.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnResult.setRequestFocusEnabled(false);
+        btnResult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResultActionPerformed(evt);
+            }
+        });
 
-        btn15.setBackground(new java.awt.Color(195, 208, 254));
-        btn15.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn15.setText("2");
-        btn15.setToolTipText("");
-        btn15.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn15.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn15.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn15.setRequestFocusEnabled(false);
+        btnAdd.setBackground(new java.awt.Color(103, 254, 118));
+        btnAdd.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnAdd.setText("+");
+        btnAdd.setToolTipText("");
+        btnAdd.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnAdd.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnAdd.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnAdd.setRequestFocusEnabled(false);
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
-        btn16.setBackground(new java.awt.Color(195, 208, 254));
-        btn16.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn16.setText("5");
-        btn16.setToolTipText("");
-        btn16.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn16.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn16.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn16.setRequestFocusEnabled(false);
+        btnNegate.setBackground(new java.awt.Color(103, 254, 118));
+        btnNegate.setFont(new java.awt.Font("Consolas", 1, 28)); // NOI18N
+        btnNegate.setText("+/_");
+        btnNegate.setToolTipText("");
+        btnNegate.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnNegate.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnNegate.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnNegate.setRequestFocusEnabled(false);
+        btnNegate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNegateActionPerformed(evt);
+            }
+        });
 
-        btn17.setBackground(new java.awt.Color(195, 208, 254));
-        btn17.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn17.setText("6");
-        btn17.setToolTipText("");
-        btn17.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn17.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn17.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn17.setRequestFocusEnabled(false);
+        btnDot.setBackground(new java.awt.Color(195, 208, 254));
+        btnDot.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btnDot.setText(".");
+        btnDot.setToolTipText("");
+        btnDot.setMaximumSize(new java.awt.Dimension(80, 80));
+        btnDot.setMinimumSize(new java.awt.Dimension(80, 80));
+        btnDot.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnDot.setRequestFocusEnabled(false);
+        btnDot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDotActionPerformed(evt);
+            }
+        });
 
-        btn18.setBackground(new java.awt.Color(195, 208, 254));
-        btn18.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn18.setText("3");
-        btn18.setToolTipText("");
-        btn18.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn18.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn18.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn18.setRequestFocusEnabled(false);
+        btn0.setBackground(new java.awt.Color(195, 208, 254));
+        btn0.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
+        btn0.setText("0");
+        btn0.setToolTipText("");
+        btn0.setMaximumSize(new java.awt.Dimension(80, 80));
+        btn0.setMinimumSize(new java.awt.Dimension(80, 80));
+        btn0.setPreferredSize(new java.awt.Dimension(80, 80));
+        btn0.setRequestFocusEnabled(false);
+        btn0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn0ActionPerformed(evt);
+            }
+        });
 
-        btn19.setBackground(new java.awt.Color(103, 254, 118));
-        btn19.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn19.setText("-");
-        btn19.setToolTipText("");
-        btn19.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn19.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn19.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn19.setRequestFocusEnabled(false);
-
-        btn20.setBackground(new java.awt.Color(103, 254, 118));
-        btn20.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn20.setText("x");
-        btn20.setToolTipText("");
-        btn20.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn20.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn20.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn20.setRequestFocusEnabled(false);
-
-        btn21.setBackground(new java.awt.Color(103, 254, 118));
-        btn21.setFont(new java.awt.Font("Consolas", 1, 28)); // NOI18N
-        btn21.setText("1/x");
-        btn21.setToolTipText("");
-        btn21.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn21.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn21.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn21.setRequestFocusEnabled(false);
-
-        btn22.setBackground(new java.awt.Color(103, 254, 118));
-        btn22.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn22.setText("=");
-        btn22.setToolTipText("");
-        btn22.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn22.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn22.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn22.setRequestFocusEnabled(false);
-
-        btn24.setBackground(new java.awt.Color(103, 254, 118));
-        btn24.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn24.setText("+");
-        btn24.setToolTipText("");
-        btn24.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn24.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn24.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn24.setRequestFocusEnabled(false);
-
-        btn25.setBackground(new java.awt.Color(103, 254, 118));
-        btn25.setFont(new java.awt.Font("Consolas", 1, 28)); // NOI18N
-        btn25.setText("+/_");
-        btn25.setToolTipText("");
-        btn25.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn25.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn25.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn25.setRequestFocusEnabled(false);
-
-        btn26.setBackground(new java.awt.Color(195, 208, 254));
-        btn26.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn26.setText(".");
-        btn26.setToolTipText("");
-        btn26.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn26.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn26.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn26.setRequestFocusEnabled(false);
-
-        btn27.setBackground(new java.awt.Color(195, 208, 254));
-        btn27.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
-        btn27.setText("0");
-        btn27.setToolTipText("");
-        btn27.setMaximumSize(new java.awt.Dimension(80, 80));
-        btn27.setMinimumSize(new java.awt.Dimension(80, 80));
-        btn27.setPreferredSize(new java.awt.Dimension(80, 80));
-        btn27.setRequestFocusEnabled(false);
-
-        javax.swing.GroupLayout pnContainerLayout = new javax.swing.GroupLayout(pnContainer);
-        pnContainer.setLayout(pnContainerLayout);
-        pnContainerLayout.setHorizontalGroup(
-            pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnContainerLayout.createSequentialGroup()
-                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnContainerLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnlContainerLayout = new javax.swing.GroupLayout(pnlContainer);
+        pnlContainer.setLayout(pnlContainerLayout);
+        pnlContainerLayout.setHorizontalGroup(
+            pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContainerLayout.createSequentialGroup()
+                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContainerLayout.createSequentialGroup()
                         .addContainerGap(20, Short.MAX_VALUE)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(seperator, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1))
-                    .addGroup(pnContainerLayout.createSequentialGroup()
+                        .addComponent(lblClear))
+                    .addGroup(pnlContainerLayout.createSequentialGroup()
                         .addGap(9, 9, 9)
-                        .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnContainerLayout.createSequentialGroup()
-                                .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(11, 11, 11)
-                                .addComponent(btn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnContainerLayout.createSequentialGroup()
-                                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(pnContainerLayout.createSequentialGroup()
-                                        .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btn10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(11, 11, 11)
-                                        .addComponent(btn11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(pnContainerLayout.createSequentialGroup()
+                        .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlContainerLayout.createSequentialGroup()
                                 .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(btn16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btn17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(btn20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnDiv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(11, 11, 11)
-                                .addComponent(btn21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnContainerLayout.createSequentialGroup()
-                                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnContainerLayout.createSequentialGroup()
-                                        .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnPercent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlContainerLayout.createSequentialGroup()
+                                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(pnlContainerLayout.createSequentialGroup()
+                                        .addComponent(btnMC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(btn15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnMR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btn18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnMAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(btn19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(pnContainerLayout.createSequentialGroup()
-                                        .addComponent(btn27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btn26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btn25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btn24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(btnMSub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(11, 11, 11)
+                                        .addComponent(btnSqrt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(pnlContainerLayout.createSequentialGroup()
+                                .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnMul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(11, 11, 11)
-                                .addComponent(btn22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(btnInverse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlContainerLayout.createSequentialGroup()
+                                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlContainerLayout.createSequentialGroup()
+                                        .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnSub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlContainerLayout.createSequentialGroup()
+                                        .addComponent(btn0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnNegate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(11, 11, 11)
+                                .addComponent(btnResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
-        pnContainerLayout.setVerticalGroup(
-            pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnContainerLayout.createSequentialGroup()
+        pnlContainerLayout.setVerticalGroup(
+            pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContainerLayout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(pnContainerLayout.createSequentialGroup()
+                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblClear)
+                    .addGroup(pnlContainerLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(seperator, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMSub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSqrt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(pnContainerLayout.createSequentialGroup()
-                        .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnDiv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPercent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInverse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnlContainerLayout.createSequentialGroup()
+                        .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSub, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(btn22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                        .addGroup(pnlContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnNegate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btnResult, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -422,26 +540,118 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(pnContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(pnContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtScreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtScreenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtScreenActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btnMCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMCActionPerformed
+
+    private void btnMRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMRActionPerformed
+
+    private void btnMAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMAddActionPerformed
+
+    private void btnMSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMSubActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMSubActionPerformed
+
+    private void btnSqrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSqrtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSqrtActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDivActionPerformed
+
+    private void btnPercentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPercentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPercentActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btnMulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMulActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMulActionPerformed
+
+    private void btnInverseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInverseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInverseActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btnSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSubActionPerformed
+
+    private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnResultActionPerformed
+
+    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn0ActionPerformed
+
+    private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDotActionPerformed
+
+    private void btnNegateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNegateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNegateActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -479,23 +689,9 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn10;
-    private javax.swing.JButton btn11;
-    private javax.swing.JButton btn12;
-    private javax.swing.JButton btn13;
-    private javax.swing.JButton btn14;
-    private javax.swing.JButton btn15;
-    private javax.swing.JButton btn16;
-    private javax.swing.JButton btn17;
-    private javax.swing.JButton btn18;
-    private javax.swing.JButton btn19;
-    private javax.swing.JButton btn20;
-    private javax.swing.JButton btn21;
-    private javax.swing.JButton btn22;
-    private javax.swing.JButton btn24;
-    private javax.swing.JButton btn25;
-    private javax.swing.JButton btn26;
-    private javax.swing.JButton btn27;
+    private javax.swing.JButton btn0;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
     private javax.swing.JButton btn3;
     private javax.swing.JButton btn4;
     private javax.swing.JButton btn5;
@@ -503,9 +699,23 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btn7;
     private javax.swing.JButton btn8;
     private javax.swing.JButton btn9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel pnContainer;
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnDiv;
+    private javax.swing.JButton btnDot;
+    private javax.swing.JButton btnInverse;
+    private javax.swing.JButton btnMAdd;
+    private javax.swing.JButton btnMC;
+    private javax.swing.JButton btnMR;
+    private javax.swing.JButton btnMSub;
+    private javax.swing.JButton btnMul;
+    private javax.swing.JButton btnNegate;
+    private javax.swing.JButton btnPercent;
+    private javax.swing.JButton btnResult;
+    private javax.swing.JButton btnSqrt;
+    private javax.swing.JButton btnSub;
+    private javax.swing.JLabel lblClear;
+    private javax.swing.JPanel pnlContainer;
+    private javax.swing.JSeparator seperator;
+    private javax.swing.JTextField txtScreen;
     // End of variables declaration//GEN-END:variables
 }
