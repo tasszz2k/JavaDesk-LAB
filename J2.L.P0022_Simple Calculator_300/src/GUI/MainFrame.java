@@ -11,13 +11,13 @@ import Controller.Calculator;
  *
  * @author TASS
  */
-public class Main extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
 
     Calculator calculator;
     /**
      * Creates new form Main
      */
-    public Main() {
+    public MainFrame() {
         initComponents();
     }
 
@@ -64,6 +64,7 @@ public class Main extends javax.swing.JFrame {
         pnlContainer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         pnlContainer.setPreferredSize(new java.awt.Dimension(500, 630));
 
+        txtScreen.setBackground(new java.awt.Color(235, 234, 234));
         txtScreen.setFont(new java.awt.Font("Consolas", 1, 48)); // NOI18N
         txtScreen.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtScreen.setText("0");
@@ -78,6 +79,11 @@ public class Main extends javax.swing.JFrame {
 
         lblClear.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblClear.setText("All Clear");
+        lblClear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblClearMouseClicked(evt);
+            }
+        });
 
         btnMC.setBackground(new java.awt.Color(255, 219, 132));
         btnMC.setFont(new java.awt.Font("Consolas", 1, 30)); // NOI18N
@@ -653,40 +659,9 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAddActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Main().setVisible(true);
-            }
-        });
-    }
+    private void lblClearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblClearMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblClearMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn0;
