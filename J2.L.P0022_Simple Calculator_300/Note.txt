@@ -7,3 +7,7 @@ Panel_size: 500x650
 Fontfamily: Consolas
 btn_size: 90x90
 btn_fontsize: 35 bold
+
+----
+Note:
+÷: hold Type Alt-246(only numPad). 

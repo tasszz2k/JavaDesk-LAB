@@ -51,6 +51,11 @@ public class Calculator {
     }
 
     public void pressDot() {
+        if (isProcessing) {
+            txt.setText("0.");
+            isProcessing = false;
+        }
+
         if (!txt.getText().contains(".")) {
             txt.setText(txt.getText() + ".");
         }
@@ -108,14 +113,46 @@ public class Calculator {
         if (!isERROR()) {
             try {
                 double value = getValueFromScreen().doubleValue();
-                txt.setText(Math.sqrt(value) + "");
+                String valueString = Math.sqrt(value) + "";
+                txt.setText(new BigDecimal(valueString).stripTrailingZeros() + "");
             } catch (Exception e) {
                 txt.setText("ERROR");
             }
-        }else{
+        } else {
             txt.setText("0");
         }
-        isProcessing = false;
+        isProcessing = true;
+    }
+
+    public void pressPercent() {
+        if (!isERROR()) {
+            try {
+                BigDecimal bd100 = new BigDecimal("100");
+                txt.setText(getValueFromScreen().divide(bd100) + "");
+            } catch (Exception e) {
+                txt.setText("ERROR");
+            }
+        } else {
+            txt.setText("0");
+        }
+        isProcessing = true;
+    }
+
+    public void pressInverse() {
+        if (!isERROR()) {
+            try {
+                BigDecimal bd1 = new BigDecimal("1");
+                System.out.println(bd1.divide(getValueFromScreen()));
+                txt.setText(bd1.divide(getValueFromScreen()) + "");
+               
+            } catch (Exception e) {
+                txt.setText("ERROR");
+                System.out.println(e.toString());
+            }
+        } else {
+            txt.setText("0");
+        }
+        isProcessing = true;
     }
 
     //Get/Set

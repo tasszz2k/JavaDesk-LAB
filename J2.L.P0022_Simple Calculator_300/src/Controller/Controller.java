@@ -297,19 +297,19 @@ public class Controller {
     }
 
     private void btnSqrtActionPerformed(java.awt.event.ActionEvent evt) {
-       calculator.pressSqrt();
+        calculator.pressSqrt();
     }
 
     private void btnPercentActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        calculator.pressPercent();
     }
 
     private void btnInverseActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        calculator.pressInverse();
     }
 
     private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {
-       calculator.pressResult();
+        calculator.pressResult();
     }
 
     private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {
