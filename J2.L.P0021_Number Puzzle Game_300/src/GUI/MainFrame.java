@@ -5,6 +5,11 @@
  */
 package GUI;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 /**
  *
  * @author TASS
@@ -18,6 +23,92 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JButton getBtnNewGame() {
+        return btnNewGame;
+    }
+
+    public void setBtnNewGame(JButton btnNewGame) {
+        this.btnNewGame = btnNewGame;
+    }
+
+    public JComboBox<String> getCmbSize() {
+        return cmbSize;
+    }
+
+    public void setCmbSize(JComboBox<String> cmbSize) {
+        this.cmbSize = cmbSize;
+    }
+
+    public JLabel getLbl1() {
+        return lbl1;
+    }
+
+    public void setLbl1(JLabel lbl1) {
+        this.lbl1 = lbl1;
+    }
+
+    public JLabel getLbl2() {
+        return lbl2;
+    }
+
+    public void setLbl2(JLabel lbl2) {
+        this.lbl2 = lbl2;
+    }
+
+    public JLabel getLbl3() {
+        return lbl3;
+    }
+
+    public void setLbl3(JLabel lbl3) {
+        this.lbl3 = lbl3;
+    }
+
+    public JLabel getLblMoveCount() {
+        return lblMoveCount;
+    }
+
+    public void setLblMoveCount(JLabel lblMoveCount) {
+        this.lblMoveCount = lblMoveCount;
+    }
+
+    public JLabel getLblSize() {
+        return lblSize;
+    }
+
+    public void setLblSize(JLabel lblSize) {
+        this.lblSize = lblSize;
+    }
+
+    public JLabel getLblTime() {
+        return lblTime;
+    }
+
+    public void setLblTime(JLabel lblTime) {
+        this.lblTime = lblTime;
+    }
+
+    public JPanel getPnlControl() {
+        return pnlControl;
+    }
+
+    public void setPnlControl(JPanel pnlControl) {
+        this.pnlControl = pnlControl;
+    }
+
+    public JPanel getPnlGame() {
+        return pnlGame;
+    }
+
+    public void setPnlGame(JPanel pnlGame) {
+        this.pnlGame = pnlGame;
+    }
+
+
+    
+    
+    
+    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,13 +121,17 @@ public class MainFrame extends javax.swing.JFrame {
 
         pnlGame = new javax.swing.JPanel();
         pnlControl = new javax.swing.JPanel();
-        lblMoveCount = new javax.swing.JLabel();
-        lblTime = new javax.swing.JLabel();
+        lbl1 = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
         lblSize = new javax.swing.JLabel();
         cmbSize = new javax.swing.JComboBox<>();
         btnNewGame = new javax.swing.JButton();
+        lblMoveCount = new javax.swing.JLabel();
+        lblTime = new javax.swing.JLabel();
+        lbl3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("NPG");
 
         pnlGame.setMaximumSize(new java.awt.Dimension(500, 500));
         pnlGame.setMinimumSize(new java.awt.Dimension(500, 500));
@@ -53,11 +148,11 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 500, Short.MAX_VALUE)
         );
 
-        lblMoveCount.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblMoveCount.setText("Move count: 0");
+        lbl1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbl1.setText("Move count: ");
 
-        lblTime.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblTime.setText("Elapsed: 0 sec");
+        lbl2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbl2.setText("Elapsed: ");
 
         lblSize.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblSize.setText("Size:");
@@ -68,29 +163,52 @@ public class MainFrame extends javax.swing.JFrame {
         btnNewGame.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnNewGame.setText("New Game");
 
+        lblMoveCount.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lblMoveCount.setText("0");
+
+        lblTime.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lblTime.setText("0");
+
+        lbl3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lbl3.setText("sec");
+
         javax.swing.GroupLayout pnlControlLayout = new javax.swing.GroupLayout(pnlControl);
         pnlControl.setLayout(pnlControlLayout);
         pnlControlLayout.setHorizontalGroup(
             pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlControlLayout.createSequentialGroup()
                 .addGap(166, 166, 166)
-                .addGroup(pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlControlLayout.createSequentialGroup()
+                            .addComponent(lblSize)
+                            .addGap(18, 18, 18)
+                            .addComponent(cmbSize, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnNewGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnlControlLayout.createSequentialGroup()
-                        .addComponent(lblSize)
+                        .addComponent(lbl1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblMoveCount))
+                    .addGroup(pnlControlLayout.createSequentialGroup()
+                        .addComponent(lbl2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTime)
                         .addGap(18, 18, 18)
-                        .addComponent(cmbSize, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(lblTime)
-                    .addComponent(lblMoveCount)
-                    .addComponent(btnNewGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lbl3)))
                 .addContainerGap(186, Short.MAX_VALUE))
         );
         pnlControlLayout.setVerticalGroup(
             pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlControlLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblMoveCount)
+                .addGroup(pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl1)
+                    .addComponent(lblMoveCount))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblTime)
+                .addGroup(pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl2)
+                    .addComponent(lblTime)
+                    .addComponent(lbl3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlControlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSize)
@@ -126,41 +244,44 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new MainFrame().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNewGame;
     private javax.swing.JComboBox<String> cmbSize;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lbl3;
     private javax.swing.JLabel lblMoveCount;
     private javax.swing.JLabel lblSize;
     private javax.swing.JLabel lblTime;
