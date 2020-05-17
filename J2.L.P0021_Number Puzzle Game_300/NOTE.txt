@@ -1,0 +1,7 @@
+link game: https://www.mathsisfun.com/games/arrange.html
+Instructions:
+Choose a Level (3 to 10).
+The game board has blocks with numbers in it. Also there is a single "hole" that can be used for moving the blocks.
+The objective of the game is to order the numbers using the "hole" for temporary movement.
+Move blocks in a row by clicking on them. A block can be moved only if it is in the same row or column as the "hole".
+You can move multiple blocks (in the same row or column as the "hole") by clicking the farthest block that you need to be moved.
