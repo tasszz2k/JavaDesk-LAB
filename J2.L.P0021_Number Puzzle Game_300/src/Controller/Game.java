@@ -5,10 +5,14 @@
  */
 package Controller;
 
+import java.awt.GridBagLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author TASS
  */
 public class Game {
-    
+    void newGame(JPanel pnlGame){
+    }
 }
