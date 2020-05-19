@@ -6,6 +6,7 @@
 package Controller;
 
 import GUI.MainFrame;
+import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -19,7 +20,7 @@ import javax.swing.Timer;
 public class Controller {
 
     MainFrame mf = new MainFrame();
-    Game g = new Game();
+    Game game = new Game();
     private JButton[][] matrix;
     private int size;
     private int moveCount;
@@ -52,6 +53,22 @@ public class Controller {
         lblTime = mf.getLblTime();
         pnlControl = mf.getPnlControl();
         pnlGame = mf.getPnlGame();
+
+        btnNewGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewGameActionPerformed(evt);
+            }
+        });
+        
+        
+        //New game
+        game.createNewGame(pnlGame, size);
+    }
+
+    private void btnNewGameActionPerformed(ActionEvent evt) {
+        size = cmbSize.getSelectedIndex() + 3;
+        System.out.println(size);
+        game.createNewGame(pnlGame, size);
     }
 
     public static void main(String[] args) {

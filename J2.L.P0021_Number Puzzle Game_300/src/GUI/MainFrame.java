@@ -21,6 +21,7 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+        this.setResizable(false);
     }
 
     public JButton getBtnNewGame() {
@@ -117,7 +118,6 @@ public class MainFrame extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlGame = new javax.swing.JPanel();
         pnlControl = new javax.swing.JPanel();
@@ -162,6 +162,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         btnNewGame.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btnNewGame.setText("New Game");
+        btnNewGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewGameActionPerformed(evt);
+            }
+        });
 
         lblMoveCount.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblMoveCount.setText("0");
@@ -240,6 +245,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewGameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNewGameActionPerformed
 
     /**
      * @param args the command line arguments
