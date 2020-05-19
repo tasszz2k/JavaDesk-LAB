@@ -42,18 +42,20 @@ public class Game {
                 pnlGame.add(btns[i][j]);
                 //Add Action Listener for Jbutton
                 JButton btn = btns[i][j];
-                Point posBtn = new Point(i, j);
                 btn.addActionListener(new java.awt.event.ActionListener() {
                     public void actionPerformed(java.awt.event.ActionEvent evt) {
-
-                        boolean t = canMove(btn, new Point(0, 0));
+                        System.out.println(canMove(btn));
+                        if (canMove(btn)) {
+                            Point emptyPos = getEmptyPosition(btns);
+                            JButton emptyBtn = btns[(int) emptyPos.getX()][(int) emptyPos.getY()];
+                            swapTwoButtons(emptyBtn, btn);
+                        }
                     }
                 });
             }
         }
         //
         Point emptyPos = getEmptyPosition(btns);
-        System.out.println(emptyPos);
         btns[(int) emptyPos.getX()][(int) emptyPos.getY()].setBackground(Color.blue);
     }
 
@@ -62,7 +64,7 @@ public class Game {
         String[][] numbers = new String[size][size];
         //Set value for numbers[][]
         for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers.length; j++) {
+            for (int j = 0; j < numbers[0].length; j++) {
                 numbers[i][j] = (i * size + j) + "";
             }
         }
@@ -88,7 +90,7 @@ public class Game {
 
     Point getEmptyPosition(JButton[][] btns) {
         for (int i = 0; i < btns.length; i++) {
-            for (int j = 0; j < btns.length; j++) {
+            for (int j = 0; j < btns[0].length; j++) {
                 if (btns[i][j].getText().compareTo("") == 0) {
                     return new Point(i, j);
                 }
@@ -98,10 +100,58 @@ public class Game {
     }
 
     //Action performed btns
-    boolean canMove(JButton btnClick, Point posBtnClick) {
-        System.out.println(btnClick.getText());
-        System.out.println(posBtnClick);
-        return true;
+    boolean canMove(JButton btnClick) {
+        Point emptyPos = getEmptyPosition(btns);
+        System.err.println(emptyPos);
+        System.out.println(getButtonPosition(btns, btnClick));
+        int row = (int) emptyPos.getX();
+        int col = (int) emptyPos.getY();
+        try {
+            System.out.println(btnClick.getText() + "||" + btns[(int) getButtonPosition(btns, btnClick).getX()][(int) getButtonPosition(btns, btnClick).getY()].getText());
+//            System.out.println("==>" + btns[row - 1][col].getText());
+            System.out.println(btns[row + 1][col].getText());
+            System.out.println(btns[row][col - 1].getText());
+            System.out.println(btns[row][col + 1].getText());
+
+            //up
+            if (btnClick.getText().compareTo(btns[row - 1][col].getText()) == 0) {
+                return true;
+            } //down
+            else if (btnClick.getText().compareTo(btns[row + 1][col].getText()) == 0) {
+                return true;
+            } //left
+            else if (btnClick.getText().compareTo(btns[row][col - 1].getText()) == 0) {
+                return true;
+            } //right
+            else if (btnClick.getText().compareTo(btns[row][col + 1].getText()) == 0) {
+                return true;
+            }
+
+        } catch (Exception e) {
+            //Do nothing
+        }
+        return false;
+    }
+
+    void swapTwoButtons(JButton emptyBtn, JButton btn) {
+        //swap background color
+        btn.setBackground(Color.blue);
+        emptyBtn.setBackground(null);
+        //swap txt
+        emptyBtn.setText(btn.getText());
+        btn.setText("");
+
+    }
+
+    Point getButtonPosition(JButton[][] btns, JButton btn) {
+        for (int i = 0; i < btns.length; i++) {
+            for (int j = 0; j < btns[0].length; j++) {
+                if (btns[i][j].getText().compareTo(btn.getText()) == 0) {
+                    return new Point(i, j);
+                }
+            }
+        }
+        return null;
     }
 
 }

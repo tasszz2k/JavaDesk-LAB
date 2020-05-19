@@ -71,8 +71,6 @@ public class Controller {
         game.createNewGame(pnlGame, size);
     }
 
-    public static void main(String[] args) {
-        new Controller();
-    }
+
 
 }
