@@ -53,6 +53,7 @@ public class Controller {
     }
 
     private void btnNewGameActionPerformed(ActionEvent evt) {
+        game.getTimer().stop();
         int size = cmbSize.getSelectedIndex() + 3;
         System.out.println(size);
         game.createNewGame(pnlGame, size, lblMoveCount, lblTime);

@@ -15,8 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import java.util.Timer;
-import java.util.TimerTask;
+import javax.swing.Timer;
 
 /**
  *
@@ -24,10 +23,10 @@ import java.util.TimerTask;
  */
 public class Game {
 
-    JButton[][] btns;
-    Timer timer;
-    int moveCounter;
-    int time;
+    private JButton[][] btns;
+    private Timer timer;
+    private int moveCounter;
+    private int time;
 
     void createNewGame(JPanel pnlGame, int size, JLabel lblMoveCount, JLabel lblTime) {
         moveCounter = 0;
@@ -35,7 +34,7 @@ public class Game {
         timer = setupTime(lblTime);
         lblMoveCount.setText("0");
         lblTime.setText("0");
-        
+
         //remove all component from Jpanel
         pnlGame.removeAll();
         pnlGame.revalidate();
@@ -43,8 +42,12 @@ public class Game {
         //
         btns = new JButton[size][size];
         pnlGame.setLayout(new GridLayout(size, size, 5, 5));
-        String[][] numbers = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "", "8"}};
-//        String[][] numbers = randomNumberOfButtons(size);
+        //#Test won
+//        String[][] numbers = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "", "8"}};
+        String[][] numbers = randomNumberOfButtons(size);
+
+        //settime
+        timer.start();
         for (int i = 0; i < btns.length; i++) {
             for (int j = 0; j < btns[0].length; j++) {
                 btns[i][j] = new JButton(numbers[i][j]);
@@ -135,16 +138,15 @@ public class Game {
             lblMoveCount.setText(++moveCounter + "");
         }
         if (isWon(btns)) {
-            timer.cancel();
-            timer.purge();
+            timer.stop();
             System.err.println("You win!!!");
             JOptionPane.showMessageDialog(null, "You win!");
             //Disable moveable when game won
             for (int i = 0; i < btns.length; i++) {
                 for (int j = 0; j < btns.length; j++) {
-                    btns[i][j].setEnabled(false);  
+                    btns[i][j].setEnabled(false);
                 }
-                
+
             }
         }
     }
@@ -186,20 +188,22 @@ public class Game {
         return true;
     }
 
-    //Time
+//    //Time
     Timer setupTime(JLabel lblTime) {
-        Timer timer = new Timer();
-        TimerTask timerTask = new TimerTask() {
+        Timer timer = new Timer(1000, new ActionListener() {
             @Override
-            public void run() {
-                time += 1;
+            public void actionPerformed(ActionEvent e) {
+                time++;
                 lblTime.setText(time + "");
             }
-        };
-
-        timer.schedule(timerTask, 1, 1000);
-
+        });
         return timer;
     }
 
+    public Timer getTimer() {
+        return timer;
+    }
+    
+    
+    
 }
