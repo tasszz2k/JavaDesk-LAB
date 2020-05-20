@@ -5,8 +5,6 @@
  */
 package Controller;
 
-import java.awt.Button;
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Point;
@@ -14,7 +12,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  *
@@ -23,8 +25,17 @@ import javax.swing.JPanel;
 public class Game {
 
     JButton[][] btns;
+    Timer timer;
+    int moveCounter;
+    int time;
 
-    void createNewGame(JPanel pnlGame, int size) {
+    void createNewGame(JPanel pnlGame, int size, JLabel lblMoveCount, JLabel lblTime) {
+        moveCounter = 0;
+        time = 0;
+        timer = setupTime(lblTime);
+        lblMoveCount.setText("0");
+        lblTime.setText("0");
+        
         //remove all component from Jpanel
         pnlGame.removeAll();
         pnlGame.revalidate();
@@ -32,7 +43,8 @@ public class Game {
         //
         btns = new JButton[size][size];
         pnlGame.setLayout(new GridLayout(size, size, 5, 5));
-        String[][] numbers = randomNumberOfButtons(size);
+        String[][] numbers = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "", "8"}};
+//        String[][] numbers = randomNumberOfButtons(size);
         for (int i = 0; i < btns.length; i++) {
             for (int j = 0; j < btns[0].length; j++) {
                 btns[i][j] = new JButton(numbers[i][j]);
@@ -44,22 +56,15 @@ public class Game {
                 JButton btn = btns[i][j];
                 btn.addActionListener(new java.awt.event.ActionListener() {
                     public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        System.out.println(canMove(btn));
-                        if (canMove(btn)) {
-                            Point emptyPos = getEmptyPosition(btns);
-                            JButton emptyBtn = btns[(int) emptyPos.getX()][(int) emptyPos.getY()];
-                            swapTwoButtons(emptyBtn, btn);
-                        }
+                        System.err.println(moveCounter);
+                        move(btn, lblMoveCount);
                     }
                 });
             }
         }
-        //
-        Point emptyPos = getEmptyPosition(btns);
-        btns[(int) emptyPos.getX()][(int) emptyPos.getY()].setBackground(Color.blue);
     }
 
-    //Make map game
+    //========================== Make map game =================================//
     String[][] randomNumberOfButtons(int size) {
         String[][] numbers = new String[size][size];
         //Set value for numbers[][]
@@ -99,44 +104,52 @@ public class Game {
         return null;
     }
 
-    //Action performed btns
+    //===================== Action performed btns ==============================//
     boolean canMove(JButton btnClick) {
+        //get empty btn position & btnClick Position
         Point emptyPos = getEmptyPosition(btns);
-        System.err.println(emptyPos);
-        System.out.println(getButtonPosition(btns, btnClick));
-        int row = (int) emptyPos.getX();
-        int col = (int) emptyPos.getY();
-        try {
-            System.out.println(btnClick.getText() + "||" + btns[(int) getButtonPosition(btns, btnClick).getX()][(int) getButtonPosition(btns, btnClick).getY()].getText());
-//            System.out.println("==>" + btns[row - 1][col].getText());
-            System.out.println(btns[row + 1][col].getText());
-            System.out.println(btns[row][col - 1].getText());
-            System.out.println(btns[row][col + 1].getText());
+        Point btnClickPos = getButtonPosition(btns, btnClick);
+        int rowEmptyBtn = (int) emptyPos.getX();
+        int colEmptyBtn = (int) emptyPos.getY();
+        int rowBtnClick = (int) btnClickPos.getX();
+        int colBtnClick = (int) btnClickPos.getY();
 
-            //up
-            if (btnClick.getText().compareTo(btns[row - 1][col].getText()) == 0) {
-                return true;
-            } //down
-            else if (btnClick.getText().compareTo(btns[row + 1][col].getText()) == 0) {
-                return true;
-            } //left
-            else if (btnClick.getText().compareTo(btns[row][col - 1].getText()) == 0) {
-                return true;
-            } //right
-            else if (btnClick.getText().compareTo(btns[row][col + 1].getText()) == 0) {
-                return true;
-            }
-
-        } catch (Exception e) {
-            //Do nothing
+        if (rowBtnClick == rowEmptyBtn && (colBtnClick == colEmptyBtn - 1 || colBtnClick == colEmptyBtn + 1)) {
+            return true;
+        } else if (colBtnClick == colEmptyBtn && (rowBtnClick == rowEmptyBtn - 1 || rowBtnClick == rowEmptyBtn + 1)) {
+            return true;
+        } else {
+            return false;
         }
-        return false;
+
     }
 
-    void swapTwoButtons(JButton emptyBtn, JButton btn) {
-        //swap background color
-        btn.setBackground(Color.blue);
-        emptyBtn.setBackground(null);
+    void move(JButton btn, JLabel lblMoveCount) {
+
+        if (canMove(btn)) {
+            Point emptyPos = getEmptyPosition(btns);
+            JButton emptyBtn = btns[(int) emptyPos.getX()][(int) emptyPos.getY()];
+            swapTxtTwoButtons(emptyBtn, btn);
+
+            //Movecounter++
+            lblMoveCount.setText(++moveCounter + "");
+        }
+        if (isWon(btns)) {
+            timer.cancel();
+            timer.purge();
+            System.err.println("You win!!!");
+            JOptionPane.showMessageDialog(null, "You win!");
+            //Disable moveable when game won
+            for (int i = 0; i < btns.length; i++) {
+                for (int j = 0; j < btns.length; j++) {
+                    btns[i][j].setEnabled(false);  
+                }
+                
+            }
+        }
+    }
+
+    void swapTxtTwoButtons(JButton emptyBtn, JButton btn) {
         //swap txt
         emptyBtn.setText(btn.getText());
         btn.setText("");
@@ -152,6 +165,41 @@ public class Game {
             }
         }
         return null;
+    }
+
+    boolean isWon(JButton[][] btns) {
+        int size = btns.length;
+        if (!btns[size - 1][size - 1].getText().isEmpty()) {
+            return false;
+        } else {
+            for (int i = 0; i < btns.length; i++) {
+                for (int j = 0; j < btns.length; j++) {
+                    if (i == size - 1 && j == size - 1) {
+                        return true;
+                    }
+                    if (btns[i][j].getText().compareTo((i * size + j + 1) + "") != 0) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    //Time
+    Timer setupTime(JLabel lblTime) {
+        Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                time += 1;
+                lblTime.setText(time + "");
+            }
+        };
+
+        timer.schedule(timerTask, 1, 1000);
+
+        return timer;
     }
 
 }

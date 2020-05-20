@@ -21,18 +21,11 @@ public class Controller {
 
     MainFrame mf = new MainFrame();
     Game game = new Game();
-    private JButton[][] matrix;
-    private int size;
-    private int moveCount;
-    private int time;
-    private Timer timer;
     //pnl control
     private JButton btnNewGame;
     private JComboBox<String> cmbSize;
     private JLabel lblMoveCount;
-    private JLabel lblSize;
     private JLabel lblTime;
-    private JPanel pnlControl;
     private JPanel pnlGame;
 
     public Controller() {
@@ -41,17 +34,11 @@ public class Controller {
     }
 
     void initComponents() {
-        size = 3;
-        JButton[][] matrix = new JButton[size][size];
-        moveCount = 0;
-        time = 0;
         //pnl control
         btnNewGame = mf.getBtnNewGame();
         cmbSize = mf.getCmbSize();
         lblMoveCount = mf.getLblMoveCount();
-        lblSize = mf.getLblSize();
         lblTime = mf.getLblTime();
-        pnlControl = mf.getPnlControl();
         pnlGame = mf.getPnlGame();
 
         btnNewGame.addActionListener(new java.awt.event.ActionListener() {
@@ -59,18 +46,16 @@ public class Controller {
                 btnNewGameActionPerformed(evt);
             }
         });
-        
-        
+
         //New game
-        game.createNewGame(pnlGame, size);
+        int size = 3;
+        game.createNewGame(pnlGame, size, lblMoveCount, lblTime);
     }
 
     private void btnNewGameActionPerformed(ActionEvent evt) {
-        size = cmbSize.getSelectedIndex() + 3;
+        int size = cmbSize.getSelectedIndex() + 3;
         System.out.println(size);
-        game.createNewGame(pnlGame, size);
+        game.createNewGame(pnlGame, size, lblMoveCount, lblTime);
     }
-
-
 
 }
