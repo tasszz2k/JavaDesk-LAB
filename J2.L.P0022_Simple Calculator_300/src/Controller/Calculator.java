@@ -48,14 +48,14 @@ public class Calculator {
             txt.setText(number + "");
             isProcessing = false;
         } else {
-            //max length number of Input = 10
-            if (txt.getText().length() <= 10) {
-                System.out.println(getValueFromScreen().scale());
-                //0.0000000x : if x != 0 --> Accept
-                if (getValueFromScreen().scale() <= 7 || (getValueFromScreen().scale() <= 8 && number != 0)) {
+//            //max length number of Input = 10
+//            if (txt.getText().length() <= 10) {
+//                System.out.println(getValueFromScreen().scale());
+//                //0.0000000x : if x != 0 --> Accept
+//                if (getValueFromScreen().scale() <= 7 || (getValueFromScreen().scale() <= 8 && number != 0)) {
                     txt.setText(txt.getText() + number);
-                }
-            }
+//                }
+//            }
         }
 
     }
