@@ -43,7 +43,6 @@ public class Frog {
 
     public void render() {
         frog.setBounds(xFrog, yFrog, WIDTH, HEIGHT);
-//        System.out.println(yFrog);
         update();
     }
 
@@ -60,11 +59,11 @@ public class Frog {
     public void fly() {
         if (isClicked) {
             isClicked = false;
-            if (yFrog <= 0) {
+            if (yFrog <= WIDTH) {
                 accelerationDown = 0;
                 return;
             } else {
-                accelerationDown = -4;
+                accelerationDown = -5;
             }
         }
     }
@@ -98,17 +97,22 @@ public class Frog {
     }
 
     public boolean isIsAlive(Pipe pipeI, Pipe pipeII) {
-//        if(yFrog >= HEIGHT_PNL-HEIGHT){
-//            isAlive = false;
-//        }else if( 
-//                
-//                ){
-//            
-//        }else{
-//            isAlive = true;
-//        }
-        
-        
+        if (yFrog >= HEIGHT_PNL - HEIGHT) {
+            System.err.println("1");
+            isAlive = false;
+        } else if (pipeI.getxPipe() >= (xFrog - pipeI.getWIDTH()) && pipeI.getxPipe() <= (xFrog + WIDTH)) {
+            if (yFrog <= pipeI.getHEIGHT() || yFrog >= (pipeI.getHEIGHT() + pipeI.getSlit() - HEIGHT)) {
+                System.err.println("2");
+
+                isAlive = false;
+            }
+        } else if (pipeII.getxPipe() >= (xFrog - pipeII.getWIDTH()) && pipeII.getxPipe() <= (xFrog + WIDTH)) {
+            if (yFrog <= pipeII.getHEIGHT() || yFrog >= (pipeII.getHEIGHT() + pipeII.getSlit() - HEIGHT)) {
+                System.err.println("3");
+
+                isAlive = false;
+            }
+        }
         return isAlive;
     }
 
@@ -123,5 +127,35 @@ public class Frog {
     public void setIsClicked(boolean isClicked) {
         this.isClicked = isClicked;
     }
+
+    public int getxFrog() {
+        return xFrog;
+    }
+
+    public int getWIDTH() {
+        return WIDTH;
+    }
+
+    public int getHEIGHT() {
+        return HEIGHT;
+    }
+
+    public float getAccelerationDown() {
+        return accelerationDown;
+    }
+
+    public int getHEIGHT_PNL() {
+        return HEIGHT_PNL;
+    }
+
+    public int getWIDTH_PNL() {
+        return WIDTH_PNL;
+    }
+
+    public boolean isIsAlive() {
+        return isAlive;
+    }
+    
+    
 
 }

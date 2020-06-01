@@ -23,8 +23,8 @@ public class Pipe {
     private final int WIDTH = 100;
     private int HEIGHT = 0;
 
-    private final int MIN_Y = 0;
-    private final int MAX_Y = 350;
+    private final int MIN_Y = 50;
+    private final int MAX_Y = 300;
 
     private final int slit = 200;
     private JButton pipe1, pipe2;
@@ -85,6 +85,34 @@ public class Pipe {
 
     public void setPipe2(JButton pipe2) {
         this.pipe2 = pipe2;
+    }
+
+    public int getHEIGHT_PNL() {
+        return HEIGHT_PNL;
+    }
+
+    public int getWIDTH_PNL() {
+        return WIDTH_PNL;
+    }
+
+    public int getyPipe() {
+        return yPipe;
+    }
+
+    public int getWIDTH() {
+        return WIDTH;
+    }
+
+    public int getMIN_Y() {
+        return MIN_Y;
+    }
+
+    public int getMAX_Y() {
+        return MAX_Y;
+    }
+
+    public int getSlit() {
+        return slit;
     }
 
 }
