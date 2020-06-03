@@ -6,6 +6,8 @@
 package gui;
 
 import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -22,6 +24,7 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+
 
     }
 
@@ -72,9 +75,6 @@ public class MainFrame extends javax.swing.JFrame {
     public void setPnlGame(JPanel pnlGame) {
         this.pnlGame = pnlGame;
     }
-    
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -117,6 +117,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 600, Short.MAX_VALUE)
         );
 
+        pnlController.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         btnPause.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnPause.setText("Pause");
         btnPause.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +126,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnPauseActionPerformed(evt);
             }
         });
+        pnlController.add(btnPause, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 29, -1, -1));
 
         btnSave.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnSave.setText("Save");
@@ -132,6 +135,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnSaveActionPerformed(evt);
             }
         });
+        pnlController.add(btnSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 29, -1, -1));
 
         btnExit.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnExit.setText("Exit");
@@ -140,62 +144,35 @@ public class MainFrame extends javax.swing.JFrame {
                 btnExitActionPerformed(evt);
             }
         });
+        pnlController.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 29, -1, -1));
 
         lbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lbl.setText("Points:");
+        pnlController.add(lbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 33, -1, -1));
 
         lblPoint.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblPoint.setText("0");
-
-        javax.swing.GroupLayout pnlControllerLayout = new javax.swing.GroupLayout(pnlController);
-        pnlController.setLayout(pnlControllerLayout);
-        pnlControllerLayout.setHorizontalGroup(
-            pnlControllerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlControllerLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnPause)
-                .addGap(84, 84, 84)
-                .addComponent(btnSave)
-                .addGap(104, 104, 104)
-                .addComponent(lbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPoint)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 352, Short.MAX_VALUE)
-                .addComponent(btnExit)
-                .addGap(8, 8, 8))
-        );
-        pnlControllerLayout.setVerticalGroup(
-            pnlControllerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlControllerLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(pnlControllerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPause)
-                    .addComponent(btnSave)
-                    .addComponent(btnExit)
-                    .addComponent(lbl)
-                    .addComponent(lblPoint))
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
+        pnlController.add(lblPoint, new org.netbeans.lib.awtextra.AbsoluteConstraints(464, 33, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(9, 9, 9)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlController, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                    .addComponent(pnlGame, javax.swing.GroupLayout.DEFAULT_SIZE, 908, Short.MAX_VALUE)
+                    .addComponent(pnlController, javax.swing.GroupLayout.PREFERRED_SIZE, 908, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(pnlGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlController, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         pack();

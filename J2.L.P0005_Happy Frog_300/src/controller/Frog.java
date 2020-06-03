@@ -59,7 +59,7 @@ public class Frog {
     public void fly() {
         if (isClicked) {
             isClicked = false;
-            if (yFrog <= WIDTH) {
+            if (yFrog <= 0) {
                 accelerationDown = 0;
                 return;
             } else {

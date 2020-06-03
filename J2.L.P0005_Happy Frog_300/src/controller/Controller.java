@@ -22,6 +22,8 @@ import javax.swing.Timer;
  */
 public class Controller {
 
+    private final int HEIGHT_PNL = 600;
+    private final int WIDTH_PNL = 900;
     // Variables declaration - do not modify                     
     private MainFrame mf = new MainFrame();
     private Timer timer;
@@ -31,8 +33,7 @@ public class Controller {
     private int point = 0;
     private boolean isPause = false;
 
-    private boolean isPress = false;
-    private boolean isRelease = false;
+    private boolean isRelease = true;
 
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnPause;
@@ -46,49 +47,22 @@ public class Controller {
         frog = new Frog(300);
         pnlGame.add(frog.getFrog());
 
-        pipeI = new Pipe(pnlGame.getWidth());
+        pipeI = new Pipe(WIDTH_PNL);
         pnlGame.add(pipeI.getPipe1());
         pnlGame.add(pipeI.getPipe2());
-        pipeII = new Pipe(pnlGame.getWidth() + 450);
+        pipeII = new Pipe(WIDTH_PNL + 450);
         pnlGame.add(pipeII.getPipe1());
         pnlGame.add(pipeII.getPipe2());
 
         pnlGame.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent me) {
-//            System.out.println(me); 
+                System.out.println(me);
                 frog.setIsClicked(true);
             }
         });
 
-        pnlGame.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                System.out.println("dsa");
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                System.out.println("");
-                if (e.getKeyCode() == KeyEvent.VK_UP) {
-                    System.out.println("xasdsjadasjdkl");
-                    if (isRelease) {
-                        isPress = true;
-                        isRelease = false;
-                        frog.setIsClicked(true);
-                    }
-                }
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                System.out.println("ajsdkldjsalk");
-                isRelease = true;
-            }
-        });
-        pnlGame.setFocusable(true);
-
-//        timer = run();
-//        timer.start();
+        timer = run();
+        timer.start();
     }
 
     void initComponents() {
@@ -100,6 +74,29 @@ public class Controller {
         pnlGame.setBorder(BorderFactory.createLineBorder(Color.blue));
         mf.setVisible(true);
 
+        //Add key Listener
+        pnlGame.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                //do nothing
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (isRelease) {
+                    isRelease = false;
+                    frog.setIsClicked(true);
+                    System.out.println("Pressed");
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                isRelease = true;
+                System.out.println("Released");
+            }
+        });
+        pnlGame.setFocusable(true);
         //
         btnPause.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,14 +119,14 @@ public class Controller {
     }
 
     public Timer run() {
-        timer = new Timer(15, new ActionListener() {
+        timer = new Timer(10, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pipeI.render();
                 pipeII.render();
                 frog.render();
                 if (!frog.isIsAlive(pipeI, pipeII)) {
-//                    timer.stop();
+                    timer.stop();
                 }
                 getPoint();
             }
@@ -138,7 +135,10 @@ public class Controller {
     }
 
     void getPoint() {
-        if (frog.getxFrog() == pipeI.getxPipe() + pipeI.getWIDTH() || frog.getxFrog() == pipeII.getxPipe() + pipeI.getWIDTH()) {
+        System.out.println(frog.getxFrog() + "==" + (pipeI.getxPipe() + pipeI.getWIDTH()));
+        if (frog.getxFrog() == pipeI.getxPipe() + pipeI.getWIDTH()
+                || frog.getxFrog() == pipeII.getxPipe() + pipeI.getWIDTH()) {
+            System.err.println("OK");
             point++;
             lblPoint.setText(point + "");
         }
@@ -159,6 +159,7 @@ public class Controller {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+        new Controller();
     }
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {
