@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Point;
@@ -12,6 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -28,7 +30,7 @@ public class Game {
     private int moveCounter;
     private int time;
 
-    void createNewGame(JPanel pnlGame, int size, JLabel lblMoveCount, JLabel lblTime) {
+    void createNewGame(JFrame mf, JPanel pnlGame, int size, JLabel lblMoveCount, JLabel lblTime) {
         moveCounter = 0;
         time = 0;
         timer = setupTime(lblTime);
@@ -41,7 +43,9 @@ public class Game {
         pnlGame.repaint();
         //
         btns = new JButton[size][size];
+        pnlGame.setPreferredSize(new Dimension(60*size, 60*size));
         pnlGame.setLayout(new GridLayout(size, size, 5, 5));
+        mf.pack();
         //#Test won
 //        String[][] numbers = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "", "8"}};
         String[][] numbers = randomNumberOfButtons(size);

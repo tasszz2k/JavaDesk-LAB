@@ -21,7 +21,7 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
-        this.setResizable(false);
+
     }
 
     public JButton getBtnNewGame() {
@@ -133,9 +133,8 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("NPG");
 
-        pnlGame.setMaximumSize(new java.awt.Dimension(500, 500));
-        pnlGame.setMinimumSize(new java.awt.Dimension(500, 500));
-        pnlGame.setPreferredSize(new java.awt.Dimension(500, 500));
+        pnlGame.setMaximumSize(new java.awt.Dimension(9999, 9999));
+        pnlGame.setMinimumSize(new java.awt.Dimension(0, 0));
 
         javax.swing.GroupLayout pnlGameLayout = new javax.swing.GroupLayout(pnlGame);
         pnlGame.setLayout(pnlGameLayout);
@@ -145,7 +144,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         pnlGameLayout.setVerticalGroup(
             pnlGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGap(0, 10, Short.MAX_VALUE)
         );
 
         lbl1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -229,7 +228,7 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlGame, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
                 .addContainerGap())
             .addComponent(pnlControl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );

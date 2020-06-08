@@ -49,14 +49,14 @@ public class Controller {
 
         //New game
         int size = 3;
-        game.createNewGame(pnlGame, size, lblMoveCount, lblTime);
+        game.createNewGame(mf, pnlGame, size, lblMoveCount, lblTime);
     }
 
     private void btnNewGameActionPerformed(ActionEvent evt) {
         game.getTimer().stop();
         int size = cmbSize.getSelectedIndex() + 3;
         System.out.println(size);
-        game.createNewGame(pnlGame, size, lblMoveCount, lblTime);
+        game.createNewGame(mf,pnlGame, size, lblMoveCount, lblTime);
     }
 
 }
